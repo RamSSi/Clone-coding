@@ -19,13 +19,13 @@
 <body>
   <header>
     <!-- header -->
-    <div>
+    <div class="logo">
       <!-- logo -->
       <i class="fab fa-youtube"></i>
     </div>
 
     <!-- botton list -->
-    <ul>
+    <ul class="header-btns">
       <li>
         <i class="fas fa-search">
           <!-- search -->
@@ -40,34 +40,37 @@
   </header>
 
   <main>
-    <section class="video-player">
+    <section class="player">
       <!-- video -->
-      <iframe controls autoplay width="560" height="315" src="https://www.youtube.com/embed/OMRZevAb_jU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-      <div class="metadata">
+      <video controls autoplay src="./assets/태연(TAEYEON)의 킬링보이스를 라이브로! - I,그대라는 시,만약에,11_11,Blue,Time Lapse,Weekend,불티,사계,Gravity,INVU,너를 그리는 시간.mp4"></video>
       <!-- playing video information -->
+      <div class="metadata">
+        <!-- tag -->
+        <ul class="hashtags">
+          <li>#태연</li>
+          <li>#TAEYEON</li>
+          <li>#Killingvoice</li>
+        </ul>
+        <!-- title -->
+        <div class="title">
+          <h1>
+            태연(TAEYEON)의 킬링보이스를 라이브로! - I,그대라는 시,만약에,11:11,Blue,Time Lapse,Weekend,불티,사계,Gravity,INVU,너를 그리는 시간
+          </h1>
+          <button class="moreBtn">
+            <i class="fas fa-caret-down" >
+              <!-- additional info -->
+            </i>
+          </button>
+        </div>
+        <!-- views -->
+        <div class="views">
+          <span class="views">조회수 17,670,069회</span>
+          <span class="date">최초 공개: 2022. 2. 22.</span>
+        </div>
+      </div>
 
-      <!-- tag -->
-      <ul class="hashtags">
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <!-- title -->
-      <div class="title">
-        <h1></h1>
-        <button class="moreBtn">
-          <i class="fas fa-caret-down" >
-            <!-- additional info -->
-          </i>
-        </button>
-      </div>
-      <!-- views -->
-      <div class="views">
-        <span class="views"></span>
-      </div>
       <!-- button list -->
-      <ul>
+      <ul class="actions">
         <li>
           <button>
             <!-- like -->
@@ -115,21 +118,89 @@
         </li>
       </ul>
 
-      <div class="channel-info">
-        <!-- profile image -->
-        <div></div>
-        <!-- nickname -->
-        <h2></h2>
-        <!-- subscribed -->
-        <div></div>
+      <div class="channel">
+        <div class="channel-info">
+          <!-- profile image -->
+          <img src="./assets/channels4_profile.jpg" alt="" />
+          <!-- nickname -->
+          <h2>
+            딩고 뮤직 / dingo music
+          </h2>
+          <!-- subscribed -->
+          <div>
+            구독자 367만명
+          </div>
+        </div>
         <!-- subscribe button -->
-        <button></button>
+        <button class="subscribe">구독</button>
       </div>
     </section>
   </main>
 
   <section class="video-list">
     <!-- video list -->
+    <ul>
+      <li>
+        <img src="./assets/video1.webp" alt="">
+        <div class="info">
+          <span class="title">
+            아이유(IU)의 킬링보이스를 라이브로! - 하루 끝, 너의 의미, 스물셋, 밤편지, 팔레트, 가을 아침, 삐삐, Blueming, 에잇, Coin, 라일락 ㅣ 딩고뮤직
+          </span>
+          <span class="channel">
+            딩고 뮤직 / dingo music
+          </span>
+          <span class="views">
+            조회수 4240만회
+          </span>
+          <span class="date">
+            1년 전
+          </span>
+        </div>
+        <button class="moreBtn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </li>
+      <li>
+        <img src="./assets/video2.webp" alt="">
+        <div class="info">
+          <span class="title">
+            윤하(Younha)의 킬링보이스를 라이브로! – 비밀번호 486, 기다리다, 먹구름, 비가 내리는 날에는, 우산, 다음에 봐, Truly, 6년 230일, 별의 조각ㅣ딩고뮤직
+          </span>
+          <span class="channel">
+            딩고 뮤직 / dingo music
+          </span>
+          <span class="views">
+            조회수 341만회
+          </span>
+          <span class="date">
+            4개월 전
+          </span>
+        </div>
+        <button class="moreBtn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </li>
+      <li>
+        <img src="./assets/video3.webp" alt="">
+        <div class="info">
+          <span class="title">
+            성시경(Sungsikyung)의 킬링보이스를 라이브로! - 너의 모든 순간, 좋을텐데, 넌 감동이었어, 희재, 두사람, 미소천사, 거리에서, 태양계, I Love Uㅣ딩고뮤직
+          </span>
+          <span class="channel">
+            딩고 뮤직 / dingo music
+          </span>
+          <span class="views">
+            조회수 2805만회
+          </span>
+          <span class="date">
+            10개월 전
+          </span>
+        </div>
+        <button class="moreBtn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </li>
+    </ul>
   </section>
 </body>
 </html>
