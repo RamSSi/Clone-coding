@@ -206,7 +206,7 @@ header .btns .fa-search {
   margin-top: var(--padding);
 }
 
-.upNext .item img {
+.upNext .item .image {
   flex: 1 1 35%;
   margin-right: var(--padding); 
 }
