@@ -90,7 +90,7 @@ header .btns .fa-search {
   padding: var(--padding);
 }
 
-.video-info .metadata .hashtags {
+.hashtags {
   display: flex;
   font-size: var(--font-small);
   color: var(--blue-color);
@@ -119,9 +119,21 @@ header .btns .fa-search {
   height: 100%;
 }
 
-.video-info .views {
+.video-info .description {
   font-size: var(--font-small);
   color: var(--grey-dark-color);
+}
+
+.video-info .description #content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+
+.video-info .description #content-hide {
+  display: none;
 }
 
 .video-info .actions {
@@ -259,4 +271,12 @@ header .btns .fa-search {
     -webkit-line-clamp: 2;
     overflow: hidden;
   }
+}
+
+
+
+/* Additional */
+
+.video-info .actions button.active {
+  color: var(--blue-color);
 }
