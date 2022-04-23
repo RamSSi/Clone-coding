@@ -41,6 +41,7 @@ likeBtn.addEventListener('click', () => clickLikeBtn());
 unlikeBtn.addEventListener('click', () => clickUnlikeBtn());
 
 
+
 // MoreButton and SimpleButton Click Event
 const moreBtn = document.getElementById('moreBtn');
 const moreContent = document.getElementById('content');
@@ -61,3 +62,18 @@ function clickHideBtn() {
 moreBtn.addEventListener('click', () => clickMoreBtn());
 hideBtn.addEventListener('click', () => clickHideBtn());
 
+
+
+// Channel Subscribe Button Event
+const subscribeBtn = document.getElementById('subscribe');
+
+subscribeBtn.addEventListener('click', () => {
+  if (subscribeBtn.classList.contains('active')) {
+    subscribeBtn.classList.remove('active');
+    subscribeBtn.innerText = '구독';
+  }
+  else {
+    subscribeBtn.classList.add('active');
+    subscribeBtn.innerText = '구독중';
+  }
+});

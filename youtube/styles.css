@@ -46,9 +46,18 @@ button:focus {
   background-color: inherit;
 }
 
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
 /* Header */
 header {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   justify-content: space-between;
   padding: var(--padding);
   background-color: var(--black-header-color);
@@ -71,9 +80,13 @@ header .btns .fa-search {
   margin-right: var(--padding);
 }
 
+.mq-container {
+  margin-top: 45.795px;
+}
+
 .player {
   position: sticky;
-  top: 0;
+  top: 45.795px;
   text-align: center;
   background-color: var(--black-color);
 }
@@ -155,9 +168,11 @@ header .btns .fa-search {
   font-size: var(--font-icon);
 }
 
+.video-info .actions button.active,
 .video-info .actions button i.active {
   color: var(--blue-color);
 }
+
 
 
 /* Channel Description */
@@ -196,9 +211,16 @@ header .btns .fa-search {
   color: var(--grey-dark-color);
 }
 
-.video-info .channel .subscribe {
+.video-info .channel #subscribe {
   color: var(--red-color);
   font-size: var(--font-medium);
+  width: 60px;
+  border-radius: 5px;
+}
+
+.video-info .channel #subscribe.active {
+  background-color: var(--red-color);
+  color: var(--white-color);
 }
 
 
@@ -273,10 +295,3 @@ header .btns .fa-search {
   }
 }
 
-
-
-/* Additional */
-
-.video-info .actions button.active {
-  color: var(--blue-color);
-}
