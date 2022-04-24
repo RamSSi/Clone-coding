@@ -8,6 +8,7 @@
 
   <link rel="shortcut icon" type="image/x-icon" href="./assets/naver-icon.png" />
   <link rel="stylesheet" href="./styles.css">
+  <script src="https://kit.fontawesome.com/3c81013ac0.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="wrap">
@@ -18,14 +19,13 @@
           <h1 class="sr-only">네이버</h1>
         </a>
     
-        <formfield class="search">
-          <legend class="sr-only">검색</legend>
-          <input type="text" />
+        <form class="search">
+          <input type="text" aria-label="검색창" />
           <button>
-            <i>d</i>
+            <i class="fa-solid fa-magnifying-glass"></i>
             <span class="sr-only">검색</span>
           </button>
-        </formfield>
+        </form>
       </div>
 
       <div class="service_area">
@@ -35,63 +35,65 @@
       </div>
 
       <nav>
-        <ul class="nav-left">
-          <li class="nav-item green">
-            <a href="#">메일</a>
-          </li>
-          <li class="nav-item green">
-            <a href="#">카페</a>
-          </li>
-          <li class="nav-item green">
-            <a href="#">블로그</a>
-          </li>
-          <li class="nav-item green">
-            <a href="#">지식iN</a>
-          </li>
-          <li class="nav-item green">
-            <a href="#">쇼핑</a>
-          </li>
-          <li class="nav-item green">
-            <a href="#">쇼핑LIVE</a>
-          </li>
-          <li class="nav-item green">
-            <a href="#">Pay</a>
-          </li>
-          <li class="nav-item green">
-            <a href="#">TV</a>
-          </li>
-        </ul>
-        <ul class="nav-right">
-          <li class="nav-item">
-            <a href="#">사전</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">뉴스</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">증권</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">부동산</a>
+        <div class="nav-wrapper">
+          <ul class="nav-left">
+            <li class="nav-item mail">
+              <a href="#" class="green">메일</a>
             </li>
-          <li class="nav-item">
-            <a href="#">지도</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">VIBE</a>
+            <li class="nav-item">
+              <a href="#" class="green">카페</a>
             </li>
-          <li class="nav-item">
-            <a href="#">책</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">웹툰</a>
-          </li>
-          <li>
-            <button>
-              <span>더보기</span>
-            </button>
-          </li>
-        </ul>
+            <li class="nav-item">
+              <a href="#" class="green">블로그</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="green">지식iN</a>
+            </li>
+            <li class="nav-item shopping">
+              <a href="#" class="green sr-only">쇼핑</a>
+            </li>
+            <li class="nav-item shopping-live">
+              <a href="#" class="green sr-only">쇼핑LIVE</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="green">Pay</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="green">TV</a>
+            </li>
+          </ul>
+          <ul class="nav-right">
+            <li class="nav-item">
+              <a href="#">사전</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">뉴스</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">증권</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">부동산</a>
+              </li>
+            <li class="nav-item">
+              <a href="#">지도</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">VIBE</a>
+              </li>
+            <li class="nav-item">
+              <a href="#">책</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">웹툰</a>
+            </li>
+            <li>
+              <button>
+                <span>더보기</span>
+              </button>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <div>

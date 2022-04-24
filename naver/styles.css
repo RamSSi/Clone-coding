@@ -2,12 +2,13 @@
   /* Color */
   --white-color: #fff;
   --black-color: #010001;
-  --green-color: #04CF5C;
+  --green-color: #0bcf5c;
   --black-header-color: #222323;
   --blue-color: #1266D5;
   --red-color: #FF0000;
   --grey-dark-color: #505050;
   --grey-light-color: #bfbfbf;
+  --border-grey-color: #ededed;
   --background-grey-color: #f1f1f1;
     
   /* Size */
@@ -48,6 +49,11 @@ button:focus {
 
 a {
   text-decoration: none;
+  color: var(--black-color);
+}
+
+input {
+  border: none;
 }
 
 .sr-only {
@@ -55,18 +61,18 @@ a {
 }
 
 .wrap {
-  width: 100%;
+  width: 1130px;
   height: 100vh;
-  align-items: center;
+  margin: 0 auto;
 }
 
 header {
-  width: 1130px;
 }
 
 header .top {
-  display: flex;
-  align-items: center;
+  display: block;
+  margin: auto 0;
+  position: relative;
 }
 
 header .logo {
@@ -84,18 +90,81 @@ header .service_area {
   right: 27px;
 }
 
+header .search {
+  border: 2px solid var(--green-color);
+  height: 564px;
+  height: 56px;
+}
+
+header .search input {
+  width: 474px;
+}
+
+header .search button {
+  background-color: var(--green-color);
+}
+
 nav {
+  width: 100vh;
+  border: 1px solid var(--border-grey-color);
+}
+
+nav .nav-wrapper {
   display: flex;
+  padding: 11px 0;
+}
+
+.green {
+  color: var(--green-color);
 }
 
 nav .nav-left,
 nav .nav-right {
   display: flex;
   list-style: none;
+  text-align: center;
+  align-items: center;
+  height: 30px;
 }
 
 nav .nav-item {
+  display: flex;
+  list-style: none;
+  align-items: center;
   margin-right: 20px;
+  font-size: var(--font-large);
+}
+
+nav .nav-item a {
+  font-weight: 700;
+}
+
+nav .nav-item.shopping, 
+nav .nav-item.shopping-live {
+}
+
+nav .nav-item.shopping::before {
+  display: flex;
+  align-items: center;
+  content: '';
+  background-image: url("./assets/shopping.jpg");
+  background-size: auto 15px;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 15px;
+} 
+
+nav .nav-item.shopping-live::before {
+  display: block;
+  content: '';
+  background-image: url("./assets/shopping-live.jpg");
+  background-size: auto 18px;
+  background-repeat: no-repeat;
+  width: 54px;
+  height: 18px;
+} 
+
+nav .nav-item.shopping-live {
 }
 
 main {
