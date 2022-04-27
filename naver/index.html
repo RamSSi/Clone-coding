@@ -13,7 +13,7 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="top">
+      <div class="inner">
         <a href="#" class="logo">
           <img src="./assets/logo.gif" alt="네이버" />
           <h1 class="sr-only">네이버</h1>
@@ -22,22 +22,31 @@
         <form class="search">
           <input type="text" aria-label="검색창" />
           <button>
+
+          </button>
+          <button class="autocomplete">
+            <i class="icon"></i>            
+          </button>
+          <button>
             <i class="fa-solid fa-magnifying-glass"></i>
             <span class="sr-only">검색</span>
           </button>
         </form>
+  
+        <div class="service">
+          <span>네이버를 시작페이지로</span>
+          <span>쥬니어네이버</span>
+          <span>해피빈</span>
+        </div>
       </div>
-
-      <div class="service_area">
-        <span>네이버를 시작페이지로</span>
-        <span>쥬니어네이버</span>
-        <span>해피빈</span>
-      </div>
-
-      <nav>
-        <div class="nav-wrapper">
+    </header>
+    
+    <div class="bar border">
+      <div class="inner">
+        <nav>
           <ul class="nav-left">
             <li class="nav-item mail">
+              <i class="icon"></i>
               <a href="#" class="green">메일</a>
             </li>
             <li class="nav-item">
@@ -58,7 +67,8 @@
             <li class="nav-item">
               <a href="#" class="green">Pay</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item tv">
+              <i class="icon"></i>
               <a href="#" class="green">TV</a>
             </li>
           </ul>
@@ -87,201 +97,172 @@
             <li class="nav-item">
               <a href="#">웹툰</a>
             </li>
-            <li>
+            <li class="moreBtn">
               <button>
                 <span>더보기</span>
               </button>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+          
+        <section>
+          <!-- weather -->
+        </section>
+      </div>
+    </div>
 
-      <div>
-        <!-- weather -->
-      </div>
-    </header>
     <main>
-      <div class="left">
-        <div class="ad-large">
-          <img src="./assets/ad-l.jpg" alt="" />
-        </div>
-  
-        <section>
-          <h2 class="sr-only">뉴스 헤드라인</h2>
-          <span>ABC뉴스</span>
-          <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span>
-          <!-- <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span>
-          <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span>
-          <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span> -->
-        </section>
-  
-        <section class="press">
-          <div class="press-menu">
-            <a href="">
-              <h2>뉴스 스탠드</h2>
-            </a>
-            <button class="subscribed-press">구독한 언론사</button>
-            <button class="all-press">전체언론사</button>
+      <div class="inner">
+        <div class="left">
+          <div class="ad-large">
+            <img src="./assets/ad-l.jpg" alt="" />
           </div>
-          <div class="subscribe"></div>
-          <table class="press-table">
-            <thead>
-              <tr>
-                <h3 class="sr-only">신문사</h3>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <a href="#">
+    
+          <section class="headline">
+            <div class="line">
+              <h2 class="sr-only">뉴스 헤드라인</h2>
+              <span>ABC뉴스</span>
+              <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span>
+              <!-- <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span>
+              <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span>
+              <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span> -->  
+            </div>
+            <div class="newsAnchor">
+              <a href="#">
+                뉴스홈
+              </a>
+              <a href="#">
+                연예
+              </a>
+              <a href="#">
+                스포츠
+              </a>
+              <a href="#">
+                경제
+              </a>
+            </div>
+          </section>
+    
+          <section class="press">
+            <div class="news-stand">
+              <a href="#">
+                <h2>뉴스 스탠드</h2>
+              </a>
+              <button class="subscribed-press">구독한 언론사</button>
+              <button class="all-press">전체언론사</button>
+            </div>
+            <div class="subscribe"></div>
+            <table class="press-table">
+              <thead>
+                <tr>
+                  <h3 class="sr-only">신문사</h3>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
                     <img src="./assets/press/1.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/2.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/3.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/4.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/5.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/6.png" alt="">
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="#">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
                     <img src="./assets/press/11.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/12.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/13.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/14.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/15.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/16.png" alt="">
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="#">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
                     <img src="./assets/press/1.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/2.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/3.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/4.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/5.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/6.png" alt="">
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="#">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
                     <img src="./assets/press/11.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/12.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/13.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/14.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/15.png" alt="">
-                  </a>
-                </td>
-                <td>
-                  <a href="#">
+                  </td>
+                  <td>
                     <img src="./assets/press/16.png" alt="">
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-      </div>
-      
-      <div class="right">
-        <section>
-          <h2 class="sr-only">로그인</h2>
-          <p>네이버를 더 안전하고 편리하게 이용하세요</p>
-          <a href="#">네이버 로그인</a>
-          <a href="#">아이디</a>
-          <a href="#">비밀번호 찾기</a>
-          <a href="#">회원가입</a>
-        </section>
-        <section>
-          <h2 class="sr-only">타임스퀘어</h2>
-          <span>코로나바이러스감염증-19 현황</span>
-          <button>이전</button>
-          <button>이후</button>
-        </section>
-        <section>
-  
-        </section>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+        
+        <div class="right">
+          <section>
+            <h2 class="sr-only">로그인</h2>
+            <p>네이버를 더 안전하고 편리하게 이용하세요</p>
+            <a href="#">네이버 로그인</a>
+            <a href="#">아이디</a>
+            <a href="#">비밀번호 찾기</a>
+            <a href="#">회원가입</a>
+          </section>
+          <section>
+            <h2 class="sr-only">타임스퀘어</h2>
+            <span>코로나바이러스감염증-19 현황</span>
+            <button>이전</button>
+            <button>이후</button>
+          </section>
+          <section>
+    
+          </section>
+        </div>
       </div>
     </main>
   </div>
