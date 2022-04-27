@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NAVER</title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="./assets/naver-icon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.jpg" />
   <link rel="stylesheet" href="./styles.css">
   <script src="https://kit.fontawesome.com/3c81013ac0.js" crossorigin="anonymous"></script>
 </head>
@@ -21,16 +21,16 @@
     
         <form class="search">
           <input type="text" aria-label="검색창" />
-          <button>
-
-          </button>
-          <button class="autocomplete">
-            <i class="icon"></i>            
-          </button>
-          <button>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span class="sr-only">검색</span>
-          </button>
+          
+          <div class="btn-group">
+            <button class="autocomplete">
+              <i class="icon"></i>            
+            </button>
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span class="sr-only">검색</span>
+            </button>
+          </div>
         </form>
   
         <div class="service">
@@ -121,13 +121,13 @@
           <section class="headline">
             <div class="line">
               <h2 class="sr-only">뉴스 헤드라인</h2>
-              <span>ABC뉴스</span>
-              <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span>
+              <a href="#" class="press-name">ABC뉴스</a>
+              <a href="#" class="headlines">가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</a>
               <!-- <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span>
               <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span>
               <span>가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허</span> -->  
             </div>
-            <div class="newsAnchor">
+            <div class="news-anchors">
               <a href="#">
                 뉴스홈
               </a>
@@ -146,7 +146,7 @@
           <section class="press">
             <div class="news-stand">
               <a href="#">
-                <h2>뉴스 스탠드</h2>
+                <h2>뉴스스탠드</h2>
               </a>
               <button class="subscribed-press">구독한 언론사</button>
               <button class="all-press">전체언론사</button>
@@ -245,19 +245,49 @@
         </div>
         
         <div class="right">
-          <section>
+          <section class="login">
             <h2 class="sr-only">로그인</h2>
             <p>네이버를 더 안전하고 편리하게 이용하세요</p>
-            <a href="#">네이버 로그인</a>
-            <a href="#">아이디</a>
-            <a href="#">비밀번호 찾기</a>
-            <a href="#">회원가입</a>
+            <a href="#" class="btn">
+              <i class="naver"></i>
+              로그인
+            </a>
+            <div class="user-info">
+              <div class="find-idpw">
+                <a href="#">아이디</a>
+                <a href="#">비밀번호 찾기</a>
+              </div>
+              <a href="#">회원가입</a>
+            </div>
           </section>
-          <section>
-            <h2 class="sr-only">타임스퀘어</h2>
-            <span>코로나바이러스감염증-19 현황</span>
-            <button>이전</button>
-            <button>이후</button>
+          <section class="timesquare">
+            <div class="lines">
+              <h2 class="sr-only">타임스퀘어</h2>
+              <div class="panel">
+                <span class="tag">이슈</span>  
+                <span>코로나바이러스감염증-19 현황</span>
+              </div>
+              <!-- <div class="panel financial">
+                <span class="stock">증시</span>  
+                <span class="index">다우</span>
+              </div>
+              <div class="panel financial">
+                <span class="stock">증시</span>  
+                <span class="index">나스닥</span>
+              </div>
+              <div class="panel financial">
+                <span class="stock">환율</span>  
+                <span class="index">USA</span>
+              </div> -->
+            </div>
+            <div class="pre-next">
+              <button>
+                <span class="sr-only">이전</span>
+              </button>
+              <button>
+                <span class="sr-only">이후</span>
+              </button>
+            </div>
           </section>
           <section>
     
