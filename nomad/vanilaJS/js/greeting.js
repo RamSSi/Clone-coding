@@ -19,8 +19,9 @@ function sayHello(userName) {
 }
 
 const savedUserName = localStorage.getItem(USERNAME_KEY);
+
 if (savedUserName === null) {
-  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.classList = "";
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   sayHello(savedUserName);
