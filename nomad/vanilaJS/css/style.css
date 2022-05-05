@@ -1,13 +1,55 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
 .hidden {
   display: none;
 }
 
-body {
+.container {
+  width: 100vw;
+  height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   z-index: 999;
+}
+
+input,
+button {
+  border: none;
+  background-color: inherit;
+}
+
+/* Greeting */
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+
+/* Clock */
+#clock {
+  font-size: 3rem;
+  margin-top: 3rem;
+}
+
+
+/* ToDo List */
+#todo-form input {
+  width: 200px;
+  border-bottom: 1px solid gray;
+  text-align: center;
 }
