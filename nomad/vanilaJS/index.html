@@ -8,17 +8,19 @@
   <title>Momentom App</title>
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- google font -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Google Icons -->
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
   <div class="container">
-    <form id="login-form" class="hidden">
-      <input required type="text" maxlength="15" placeholder="What is your name?" />
-      <button>Log In</button>
+    <form id="login-form" class="">
+      <input class="hidden" required type="text" maxlength="15" placeholder="What is your name?" />
     </form>
 
     <h1 id="greeting" class="hidden"></h1>
@@ -35,10 +37,15 @@
     </div>
 
     <div id="weather">
-      <span></span>
+      <div class="weather-container">
+        <span class="material-symbols-outlined"></span>
+        <span></span>
+      </div>
       <span></span>
     </div>
   </div>
+
+  <div id="back"></div>
 
   <script src="js/greeting.js"></script>
   <script src="js/clock.js"></script>

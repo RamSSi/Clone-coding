@@ -1,6 +1,13 @@
 * {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  text-align: center;
+  color: #000;
+  font-size: 10px;
+}
+
+body {
+  position: relative;
 }
 
 .hidden {
@@ -14,22 +21,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-img {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 999;
+  z-index: 2;
 }
 
 input,
 button {
   border: none;
   background-color: inherit;
+}
+
+input {
+  width: 15rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+input::placeholder {
+  color:rgba(233, 232, 232, 0.699);
+}
+
+button {
+  cursor: pointer;
 }
 
 /* Greeting */
@@ -39,17 +51,105 @@ button {
   margin-top: 5rem;
 }
 
+#login-form input {
+  width: 170px;
+  background-color: rgba(255, 255, 255, 0.226);
+  border-bottom: 1px solid gray;
+  border: none;
+  border-radius: 20px;
+}
+
+
 
 /* Clock */
 #clock {
-  font-size: 3rem;
-  margin-top: 3rem;
+  font-size: 5rem;
+  margin: 3rem 0;
 }
+
 
 
 /* ToDo List */
 #todo-form input {
-  width: 200px;
+  color: gray;
+  width: 15rem;
   border-bottom: 1px solid gray;
-  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#todo-list li {
+  list-style: none;
+}
+
+
+/* Background Image */
+#back {
+  background-color: #000;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+/* Quote */
+#quote {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.336);
+}
+
+#quote span {
+  color: rgb(233, 232, 232);
+}
+
+#quote span:last-child {
+  display: block;
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+
+
+/* Weather */
+#weather {
+  position: absolute;
+  bottom: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.336);
+}
+
+#weather .weather-container {
+  display: flex;
+  align-items: center;
+}
+
+#weather span {
+  color: rgb(233, 232, 232);
+  display: inline-block;
+  margin-top: 0.2rem;
+}
+
+@media (min-width: 769px) {
+  * {
+    font-size: 18px;
+  }
+
+  input {
+
+  }
 }

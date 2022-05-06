@@ -3,6 +3,36 @@
 
 const API_KEY = "962f8b6b6cfad0728c32939691af7250";
 
+function printWeatherIcon(weather) {
+  if (weather === "Clear") {
+    return "clear_day";
+  } 
+  else if (weather === "Clouds") {
+    return "cloudy";
+  }
+//    else if (weather === "Cloudy") {
+//     return "cloudy"
+//   } else if (weather === "Rain" || weather === "") {
+    
+//   } else if (weather === "") {
+    
+//   } else if (weather === "") {
+    
+//   } else if (weather === "") {
+    
+//   } else if () {
+    
+//   } else if () {
+    
+//   } else if () {
+    
+//   } else if () {
+    
+//   }
+  else 
+    return weather;
+}
+
 function onGeoOk(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
@@ -10,12 +40,17 @@ function onGeoOk(position) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      const weather = document.querySelector("#weather span:first-child");
-      const city = document.querySelector("#weather span:last-child");
+      const weather = document.querySelector(".weather-container span:first-child");
+      const temperature = document.querySelector(".weather-container span:nth-child(2)");
+      const city = document.querySelector("#weather > span");
       city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
-    });  // 
+      // weather.innerText = `${data.weather[0].main}/${data.main.temp}`;
+      weather.innerText = `${printWeatherIcon(data.weather[0].main)}`;
+      console.log(weather.innerText);
+      temperature.innerText = `${data.main.temp}`;
+    });  
 }
+
 function onGeoError() {
   
 }

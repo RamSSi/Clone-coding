@@ -25,9 +25,13 @@ const images = [
   "23.jpeg",
 ]
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
+
+let RANDOM_KEY = Math.floor(Math.random() * images.length);
+
+const chosenImage = images[RANDOM_KEY];
 
 const bgImage = document.createElement("img");
+
 bgImage.src = `img/${chosenImage}`;
 
 document.body.appendChild(bgImage);
