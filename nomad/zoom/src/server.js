@@ -1,6 +1,7 @@
 import http from "http";
 import { Server } from "socket.io";
 import express from "express";
+import { stringify } from "querystring";
 
 // import { WebSocketServer } from "ws";
 
@@ -17,14 +18,28 @@ const handleListen = () => console.log(`Listening on http://localhost:3000`);
 const httpServer = http.createServer(app);
 const wsServer = new Server(httpServer);
 
-wsServer.on("connection", socket => {
+wsServer.on("connection", (socket) => {
+  console.log(`connecting socket: ${socket.id}`);
+
   socket.onAny((event) => {
     console.log(`Socket Event: ${event}`);
-  })
+  });
+
   socket.on("enter_room", (roomName, done) => {
-    socket.join(roomName);
+    console.log("enter room");
+    socket.join(roomName);  // frontend에 알림
     done();
-    socket.to(roomName).emit("welcome");
+    socket.to(roomName).emit("welcome");  // 방의 유저들에게 알림
+    console.log(`socket: ${socket.id}, roomName: ${roomName}`);
+  });
+
+  socket.on("disconnecting", () => {
+    console.log(socket.rooms);
+    socket.rooms.forEach((room) => {
+      socket.to(room).emit("bye");
+      console.log(`room: ${room}`);
+    });
+    console.log("disconnecting");
   });
 });
 
