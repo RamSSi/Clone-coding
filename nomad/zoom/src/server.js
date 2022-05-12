@@ -18,29 +18,36 @@ const handleListen = () => console.log(`Listening on http://localhost:3000`);
 const httpServer = http.createServer(app);
 const wsServer = new Server(httpServer);
 
-wsServer.on("connection", (socket) => {
-  console.log(`connecting socket: ${socket.id}`);
+function publicRooms() {
+  const {
+    sockets: {
+      adapter: {sids, rooms},
+    },
+  } = wsServer;
+}
 
+wsServer.on("connection", (socket) => {
+  socket["nickname"] = "Anonymous";
   socket.onAny((event) => {
     console.log(`Socket Event: ${event}`);
   });
 
   socket.on("enter_room", (roomName, done) => {
-    console.log("enter room");
     socket.join(roomName);  // frontend에 알림
     done();
     socket.to(roomName).emit("welcome");  // 방의 유저들에게 알림
-    console.log(`socket: ${socket.id}, roomName: ${roomName}`);
   });
 
   socket.on("disconnecting", () => {
-    console.log(socket.rooms);
-    socket.rooms.forEach((room) => {
-      socket.to(room).emit("bye");
-      console.log(`room: ${room}`);
-    });
-    console.log("disconnecting");
+    socket.rooms.forEach((roomName) => socket.to(roomName).emit("bye", socket.nickname));
   });
+
+  socket.on("new_message", (msg, roomName, done) => {
+    socket.to(roomName).emit("new_message", `${socket.nickname}: ${msg}`);
+    done();
+  });
+
+  socket.on("nickname", nickname => socket["nickname"] = nickname)
 });
 
 // const server = http.createServer(app);
